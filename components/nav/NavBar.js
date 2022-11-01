@@ -56,7 +56,7 @@ function AppNavBar({ token, setToken }) {
 }
 
 AppNavBar.propTypes = {
-  token: PropTypes.number.isRequired,
+  token: PropTypes.string.isRequired,
   setToken: PropTypes.func.isRequired,
 };
 export default AppNavBar;
