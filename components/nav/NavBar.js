@@ -33,7 +33,7 @@ function AppNavBar({ token, setToken }) {
                 className="button is-outlined"
                 onClick={() => {
                   setToken('');
-                  navigate('/login');
+                  navigate.push('/login');
                 }}
               >
                 Logout
@@ -56,7 +56,7 @@ function AppNavBar({ token, setToken }) {
 }
 
 AppNavBar.propTypes = {
-  token: PropTypes.string.isRequired,
+  token: PropTypes.number.isRequired,
   setToken: PropTypes.func.isRequired,
 };
 export default AppNavBar;
