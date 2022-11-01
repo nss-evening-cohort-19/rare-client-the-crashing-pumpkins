@@ -20,7 +20,7 @@ function Login({ setToken }) {
 
     loginUser(user).then((res) => {
       if ('valid' in res && res.valid) {
-        setToken(res.token);
+        setToken(res.token.toString());
         navigate.push('/');
       } else {
         setisUnsuccessful(true);
