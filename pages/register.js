@@ -10,6 +10,7 @@ function Home({ setToken }) {
   const email = useRef();
   const username = useRef();
   const bio = useRef();
+  const profileImageUrl = useRef();
   const password = useRef();
   const verifyPassword = useRef();
   const passwordDialog = useRef();
@@ -26,6 +27,7 @@ function Home({ setToken }) {
         email: email.current.value,
         password: password.current.value,
         bio: bio.current.value,
+        profile_image_url: profileImageUrl.current.value,
       };
 
       registerUser(newUser).then((res) => {
@@ -71,6 +73,12 @@ function Home({ setToken }) {
         <div className="field">
           <label className="label">
             Password <input className="input" type="password" placeholder="Password" ref={password} /> <input className="input" type="password" placeholder="Verify Password" ref={verifyPassword} />
+          </label>
+        </div>
+
+        <div className="field">
+          <label className="label">
+            Profile Image Url <input className="input" type="text" ref={profileImageUrl} />
           </label>
         </div>
 
