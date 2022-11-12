@@ -7,7 +7,7 @@ import Logo from './rare.jpeg';
 
 function AppNavBar({ token, setToken }) {
   const navigate = useRouter();
-
+  // console.warn(typeof token);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -32,7 +32,7 @@ function AppNavBar({ token, setToken }) {
                 type="button"
                 className="button is-outlined"
                 onClick={() => {
-                  setToken('');
+                  setToken(token);
                   navigate.push('/login');
                 }}
               >
