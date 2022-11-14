@@ -33,7 +33,7 @@ function Home({ setToken }) {
       registerUser(newUser).then((res) => {
         if ('valid' in res && res.valid) {
           setToken(res.token);
-          navigate.push('/');
+          navigate.push('/posts');
         }
       });
     } else {
